@@ -125,7 +125,7 @@ Number of ingredients = 4
  
  flavor -> -2k1 + -3k2 + 5k3 + 0k4 >= 1 (CONSTRAINT-2)
 
- //in order to provide max. score and fixed 500 calories
+ //in order to provide max. score , avoid minus value and and to hold fixed 500 calories;
  
  k1+ k2 = 60
  k3 + k4 = 40
