@@ -64,11 +64,13 @@ Candy        # 0k4      # -1k4       # 0k4    # 5k4     #    //highest variable 
 
 CONSTRAINT-1 Your recipe leaves room for exactly 100 teaspoons of ingredients.
 
-CONSTRAINT-2 You need to find the total score of the highest-scoring cookie.
+CONSTRAINT -2 Sum of property values must be bigger than zero.
+
+CONSTRAINT-3 You need to find the total score of the highest-scoring cookie.
 
 Number of ingredients = 4 
 
- 2k1 + 5k2 + 5k3 + 5k4 = 100tsp
+ 2k1 + 5k2 + 5k3 + 5k4 = 100tsp (CONSTRAINT-1)
  1*(2k) + 3*(5k) = 100tsp
  //in order to provide max. score
  2k = 1tsp
@@ -106,18 +108,22 @@ Candy        # 0k4      # -1k4       # 0k4    # 5k4     # 8k4            //calor
 
 CONSTRAINT-1 Your recipe leaves room for exactly 100 teaspoons of ingredients.
 
-CONSTRAINT-2 Calorie must be a total of 500.
+CONSTRAINT -2 Sum of property values must be bigger than zero
+
+CONSTRAINT-3 Calorie value must be a total of 500.
+
+CONSTRAINT-4 You need to find the total score of the highest-scoring cookie while value of total calories remains 500.
 
 
 Number of ingredients = 4 
 
  
- k1 + k2 + k3 + k4 = 100
- 3k1 + 3k2 + 8k3 + 8k4 = 500 calories
+ k1 + k2 + k3 + k4 = 100 (CONSTRAINT-1)
+ 3k1 + 3k2 + 8k3 + 8k4 = 500 calories (CONSTRAINT-3)
  3(k1+ k2) + 8(k3 + k4) = 500
- 3(60) + 8(40) = 500
+ 3(60) + 8(40) = 500 (CONSTRAINT-4)
  
- flavor -> -2k1 + -3k2 + 5k3 + 0k4 >= 1
+ flavor -> -2k1 + -3k2 + 5k3 + 0k4 >= 1 (CONSTRAINT-2)
 
  //in order to provide max. score and fixed 500 calories
  
